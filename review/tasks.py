@@ -4,6 +4,7 @@ from .run_analysis import run_flake8_analysis, run_pylint_analysis, run_bandit_a
 import os
 
 
+
 @shared_task
 def analyze_code(repo_url):
     code_dir = fetch_code_from_github(repo_url)
@@ -26,8 +27,3 @@ def analyze_code(repo_url):
 
     return analysis_results
 
-
-
-# @shared_task
-# def add(x, y):
-#     return x + y
