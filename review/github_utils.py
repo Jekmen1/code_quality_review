@@ -3,8 +3,7 @@ import os
 
 
 def fetch_code_from_github(repo_url, branch='main'):
-    g = Github("Y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")
-    # g = Github("YOUR_GITHUB_ACCESS_TOKEN")
+    g = Github("YOUR_GITHUB_ACCESS_TOKEN")
     repo = g.get_repo(repo_url)
     contents = repo.get_contents("", ref=branch)
 
